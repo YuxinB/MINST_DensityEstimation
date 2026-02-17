@@ -1,0 +1,7 @@
+#!/bin/bash
+
+device=cuda:1
+uv run python run_transformer.py --dataset deterministic --mode online --device $device
+uv run python run_transformer.py --dataset deterministic --mode batched --device $device
+uv run python run_transformer.py --dataset stochastic --mode online --device $device
+uv run python run_transformer.py --dataset stochastic --mode batched --device $device
